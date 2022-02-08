@@ -1,9 +1,9 @@
-@color_mixed 게시물 게시 자동화 프로젝트
+@color_mixed 게시물 업로드 자동화 프로젝트
 ===
 
 # 1. 진행 배경
 
-필자는 인스타에서 @color_mixed 계정을 통해 두가지 색상을 위아래로 나누어 만든 이미지를 하루에 하나씩 게시중이다.
+필자는 인스타에서 @color_mixed 계정을 통해 두가지 색상을 위아래로 나누어 만든 이미지를 하루에 하나씩 업로드중이다.
 
 ### 업로드 사진 예시
 ![color_mixed example](https://user-images.githubusercontent.com/76836510/152685460-bf4d2ff4-8c3d-4011-83cb-f67accf88f82.jpg)
