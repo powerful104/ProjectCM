@@ -7,3 +7,7 @@ def get_color_value():
 
 a, b = get_color_value()
 print(a,b)
+
+"""
+튜플은 B, G, R의 형태로 나타낸다.
+"""
