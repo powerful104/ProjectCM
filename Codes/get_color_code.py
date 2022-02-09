@@ -4,7 +4,7 @@ def get_color_code(up_color, down_color):
     for i in range(3):
         up_code = hex(up_color[i])[2:]+ up_code
         down_code = hex(down_color[i])[2:] + down_code
-    return up_code, down_code
+    return up_code.upper(), down_code.upper()
 
 u, d = get_color_code((185, 117, 97), (178, 215, 224))
 print(u, d)
