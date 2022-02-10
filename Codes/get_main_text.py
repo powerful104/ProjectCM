@@ -2,13 +2,45 @@ import datetime
 import string
 
 """
+get_postnum 함수
+
+매개변수 :
+
+반환값 :
+    extra에 위치하는 게시물 번호를 반환
+    
+기능 :
+    업로드에 이용되는 게시물 번호를 반환한다.
+"""
+
+def get_postnum():
+    f = open('extra/post_num.txt','r')
+    post_num = f.readline()
+    f.close()
+    return int(post_num)
+
+"""
+set_postnum 함수
+매개변수 :
+    수정 게시물 번호
+반환값 :
+    
+기능 :
+    업로드에 이용되는 게시물 번호를 수정한다.
+"""
+
+def set_postnum(post_num):
+    f = open('extra/post_num.txt','w')
+    f.write(str(post_num))
+    f.close()
+
+"""
 get_main_text 함수
 
 매개변수 :
     위의 색정보를 가진 6글자의 문자열
     아래의 색정보를 가진 6글자의 문자열
     그날의 글(문자열)
-    게시물 번호(정수)
 
 반환값 :
     인스타 게시물의 본문 부분의 문자열
@@ -25,12 +57,12 @@ def add_suffix(myDate):
     else:
         return str(myDate) + date_suffix[0]
 
-def get_main_text(up_color_code, down_color_code, daily_text, post_num):
+def get_main_text(up_color_code, down_color_code, daily_text):
     date = datetime.datetime.now()
+    post_num = get_postnum() + 1
     main_text = ".\n" + str(date.month) + "월 " + str(date.day) + "일\n색깔\n위 : #" + up_color_code + "\n아래 : #" + down_color_code + \
                 "\n\n" + date.strftime("%b ") + add_suffix(int(date.day)) + "\nColor\nUP : #" + up_color_code + "\nDOWN : #" + down_color_code + \
                 "\n\n" + daily_text + "\n\n" + "인스타 No." + str(post_num) + " by park_sang\n#색감 #color #"+ up_color_code + \
                 " #" + down_color_code + " #색감미술관 #예술 #미술 #감성 #innerpeace #colorsense #colorpalette #art #artist\n@park_sang_daily\n@photo_mixed"
+    set_postnum(post_num)
     return main_text
-
-print(get_main_text("6175B9","E0D7B2","좋은하루.", 691))
