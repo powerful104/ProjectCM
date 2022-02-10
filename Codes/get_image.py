@@ -23,15 +23,10 @@ get_image 함수
 """
 
 def get_image(up_color, down_color):
-    img = np.zeros((600,600,3),dtype=np.uint8)
-    for r in range(300):
-        for c in range(600):
+    img = np.zeros((1200,1200,3),dtype=np.uint8)
+    for r in range(600):
+        for c in range(1200):
             img[r, c] = up_color
-            img[r+300, c] = down_color
+            img[r+600, c] = down_color
+    cv2.imwrite('extra/today_img.jpg', img)
     return img
-
-test_img = get_image((185, 117, 97), (178, 215, 224))
-print(test_img.shape)
-cv2.imshow('img',test_img)
-cv2.waitKey()
-cv2.destroyAllWindows()
