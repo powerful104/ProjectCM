@@ -80,11 +80,8 @@ def upload_insta(main_text):
     WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "//*[@id=\"react-root\"]/section/div[2]/section[1]/div[1]/textarea")))
     driver.find_element_by_xpath("//*[@id=\"react-root\"]/section/div[2]/section[1]/div[1]/textarea").send_keys(main_text)
     
-    time.sleep(200)
-    
     WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "//*[@id=\"react-root\"]/section/div[1]/header/div/div[2]/button")))
     driver.find_element_by_xpath("//*[@id=\"react-root\"]/section/div[1]/header/div/div[2]/button").click()
     
     time.sleep(10)
-    
     driver.quit()
