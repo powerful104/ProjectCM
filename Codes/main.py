@@ -9,6 +9,7 @@ def main():
     print("색을 지정할 건지, 랜덤으로 할건지 골라 주십시오.")
     print("1: 색 지정  2: 랜덤")
     print("선택 : ",end='')
+    
     flag = int(input())
     if flag == 1:
         print("색을 지정해주십시오 (16진수 RGB 코드로 적어주셔야 합니다.)")
