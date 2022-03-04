@@ -63,6 +63,6 @@ def get_main_text(up_color_code, down_color_code, daily_text):
     main_text = ".\n" + str(date.month) + "월 " + str(date.day) + "일\n색깔\n위 : #" + up_color_code + "\n아래 : #" + down_color_code + \
                 "\n\n" + date.strftime("%b ") + add_suffix(int(date.day)) + "\nColor\nUP : #" + up_color_code + "\nDOWN : #" + down_color_code + \
                 "\n\n" + daily_text + "\n\n" + "인스타 No." + str(post_num) + " by park_sang\n#색감 #color #"+ up_color_code + \
-                " #" + down_color_code + " #색감미술관 #예술 #미술 #감성 #innerpeace #colorsense #colorpalette #art #artist\n@park_sang_daily\n@photo_mixed"
+                " #" + down_color_code + " #색감미술관 #예술 #미술 #감성 #innerpeace #colorsense #colorpalette #art #artist\n@park_sang_daily\n@photo__mixed"
     set_postnum(post_num)
     return main_text
